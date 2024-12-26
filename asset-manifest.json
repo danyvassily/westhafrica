@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/westhafrica/static/css/main.cee178d9.css",
-    "main.js": "/westhafrica/static/js/main.49931f54.js",
+    "main.js": "/westhafrica/static/js/main.320dc73a.js",
     "static/media/video.mp4": "/westhafrica/static/media/video.88b9237e5498ac0e4b99.mp4",
     "static/media/chef.png": "/westhafrica/static/media/chef.400b6a733d425b0d2455.png",
     "static/media/food5.png": "/westhafrica/static/media/food5.e27fe4b3ed63ef9567d7.png",
@@ -16,7 +16,6 @@
     "static/media/salle.png": "/westhafrica/static/media/salle.1e673cc27003b91df640.png",
     "static/media/streetfoodafiche.png": "/westhafrica/static/media/streetfoodafiche.9de3c2ea133f68167f26.png",
     "static/media/food1.png": "/westhafrica/static/media/food1.5461146d4cd0395f151b.png",
-    "static/media/new2.png": "/westhafrica/static/media/new2.fb31fa38a5fbf83fd159.png",
     "static/media/im2.png": "/westhafrica/static/media/im2.e32316ccbe9991f6ad0f.png",
     "static/media/im1.png": "/westhafrica/static/media/im1.517bbbee399a3ddb74c8.png",
     "static/media/menu.jpg": "/westhafrica/static/media/menu.5d3d9934857fd66830d1.jpg",
@@ -27,10 +26,10 @@
     "index.html": "/westhafrica/index.html",
     "static/media/spoon.svg": "/westhafrica/static/media/spoon.e7ad78a0cb2938e5640b307135a9719c.svg",
     "main.cee178d9.css.map": "/westhafrica/static/css/main.cee178d9.css.map",
-    "main.49931f54.js.map": "/westhafrica/static/js/main.49931f54.js.map"
+    "main.320dc73a.js.map": "/westhafrica/static/js/main.320dc73a.js.map"
   },
   "entrypoints": [
     "static/css/main.cee178d9.css",
-    "static/js/main.49931f54.js"
+    "static/js/main.320dc73a.js"
   ]
 }
