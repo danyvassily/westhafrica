@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { FaStar, FaRegStar, FaEllipsisV, FaGoogle } from 'react-icons/fa';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -11,89 +11,7 @@ const Reviews = () => {
     const [visibleReviews, setVisibleReviews] = useState([]);
     const BATCH_SIZE = 5;
 
-    useEffect(() => {
-        // Simulation du chargement initial
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, []);
-
-    useEffect(() => {
-        if (!isLoading) {
-            // Chargement progressif des avis par batch
-            let currentBatch = 0;
-            const loadNextBatch = () => {
-                const start = currentBatch * BATCH_SIZE;
-                const end = start + BATCH_SIZE;
-                const newBatch = reviews.slice(0, end);
-                setVisibleReviews(newBatch);
-                currentBatch++;
-
-                if (end < reviews.length) {
-                    setTimeout(loadNextBatch, 300);
-                }
-            };
-
-            loadNextBatch();
-        }
-    }, [isLoading]);
-
-    useEffect(() => {
-        if (!isLoading) {
-            // Animation des avis
-            reviewsRef.current.forEach((review, index) => {
-                if (!review) return;
-
-                gsap.fromTo(
-                    review,
-                    {
-                        opacity: 0,
-                        y: 50,
-                        scale: 0.9,
-                        rotateX: -15
-                    },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                        rotateX: 0,
-                        duration: 0.8,
-                        ease: "back.out(1.2)",
-                        scrollTrigger: {
-                            trigger: review,
-                            start: "top bottom-=100",
-                            end: "top center",
-                            toggleActions: "play none none reverse",
-                        },
-                        delay: index * 0.1
-                    }
-                );
-            });
-
-            // Animation pour l'appel à l'action
-            gsap.fromTo(
-                ".cta-section",
-                {
-                    opacity: 0,
-                    y: 30
-                },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    scrollTrigger: {
-                        trigger: ".cta-section",
-                        start: "top bottom-=50",
-                        toggleActions: "play none none reverse"
-                    }
-                }
-            );
-        }
-    }, [isLoading, visibleReviews]);
-
-    const reviews = [
+    const reviews = useMemo(() => [
         {
             username: "Clement Gracyk",
             rating: 5,
@@ -160,7 +78,89 @@ const Reviews = () => {
             text: "Restaurant super ! C'est un véritable régal à chaque repas ! Avec l'ambiance et le personnel au top ! Les plats sont copieux et savoureux ! Je recommande vivement ! Vous pouvez y aller les yeux fermés !",
             visitDate: "Visité en octobre"
         },
-    ];
+    ], []);
+
+    useEffect(() => {
+        // Simulation du chargement initial
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        if (!isLoading) {
+            // Chargement progressif des avis par batch
+            let currentBatch = 0;
+            const loadNextBatch = () => {
+                const start = currentBatch * BATCH_SIZE;
+                const end = start + BATCH_SIZE;
+                const newBatch = reviews.slice(0, end);
+                setVisibleReviews(newBatch);
+                currentBatch++;
+
+                if (end < reviews.length) {
+                    setTimeout(loadNextBatch, 300);
+                }
+            };
+
+            loadNextBatch();
+        }
+    }, [isLoading, reviews, BATCH_SIZE]);
+
+    useEffect(() => {
+        if (!isLoading) {
+            // Animation des avis
+            reviewsRef.current.forEach((review, index) => {
+                if (!review) return;
+
+                gsap.fromTo(
+                    review,
+                    {
+                        opacity: 0,
+                        y: 50,
+                        scale: 0.9,
+                        rotateX: -15
+                    },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        rotateX: 0,
+                        duration: 0.8,
+                        ease: "back.out(1.2)",
+                        scrollTrigger: {
+                            trigger: review,
+                            start: "top bottom-=100",
+                            end: "top center",
+                            toggleActions: "play none none reverse",
+                        },
+                        delay: index * 0.1
+                    }
+                );
+            });
+
+            // Animation pour l'appel à l'action
+            gsap.fromTo(
+                ".cta-section",
+                {
+                    opacity: 0,
+                    y: 30
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ".cta-section",
+                        start: "top bottom-=50",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        }
+    }, [isLoading, visibleReviews]);
 
     const renderStars = (rating) => {
         return Array.from({ length: 5 }, (v, i) =>

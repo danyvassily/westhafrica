@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { SubHeading } from '../../components';
 import { images } from '../../constants';
 import gsap from 'gsap';
@@ -8,13 +8,20 @@ gsap.registerPlugin(TextPlugin);
 
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
-    const refs = {
-        title: useRef(null),
-        text: useRef(null), 
-        image: useRef(null),
-        banner: useRef(null),
-        animatedText: useRef(null)
-    };
+    
+    const titleRef = useRef(null);
+    const textRef = useRef(null);
+    const imageRef = useRef(null);
+    const bannerRef = useRef(null);
+    const animatedTextRef = useRef(null);
+    
+    const refs = useMemo(() => ({
+        title: titleRef,
+        text: textRef,
+        image: imageRef,
+        banner: bannerRef,
+        animatedText: animatedTextRef
+    }), []);
 
     const scrollToMenu = () => {
         document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -81,7 +88,7 @@ const Header = () => {
                 refs.text.current.classList.remove('opacity-0', 'translate-x-full');
             }
         }
-    }, [isMobile]);
+    }, [isMobile, refs]);
 
     return (
         <div className="relative min-h-screen overflow-hidden bg-black" id="home">

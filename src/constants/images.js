@@ -15,7 +15,7 @@ import chef from "../assets/chef.png";
 import streetfoodafiche from "../assets/streetfoodafiche.png";
 import caption from "../assets/caption.jpg";
 
-export default {
+const images = {
   logo,
   spoon,
   plat,
@@ -33,3 +33,5 @@ export default {
   streetfoodafiche,
   caption,
 };
+
+export default images;

@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { images } from '../../constants';
 import salle from '../../assets/salle.png';
-import new2 from '../../assets/new2.png';
 import im2 from '../../assets/im2.png';
 import im1 from '../../assets/im1.png';
 import food5 from '../../assets/food5.png';
