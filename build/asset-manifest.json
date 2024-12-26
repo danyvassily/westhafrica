@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Westafricarestaurant/static/css/main.52f6c78b.css",
+    "main.js": "/Westafricarestaurant/static/js/main.19db4240.js",
+    "static/media/video.mp4": "/Westafricarestaurant/static/media/video.88b9237e5498ac0e4b99.mp4",
+    "static/media/chef.png": "/Westafricarestaurant/static/media/chef.400b6a733d425b0d2455.png",
+    "static/media/food5.png": "/Westafricarestaurant/static/media/food5.e27fe4b3ed63ef9567d7.png",
+    "static/media/cliente-sac.png": "/Westafricarestaurant/static/media/cliente-sac.a1c7ddc90f35c5fa8cd7.png",
+    "static/media/plats.png": "/Westafricarestaurant/static/media/plats.94a529b5c62715231356.png",
+    "static/media/clit.png": "/Westafricarestaurant/static/media/clit.366bd9d7a06f5e7fc9bb.png",
+    "static/media/food5.jpeg": "/Westafricarestaurant/static/media/food5.b797624cd7b3342d5477.jpeg",
+    "static/media/food4.jpeg": "/Westafricarestaurant/static/media/food4.c5695779d860b4ff39c1.jpeg",
+    "static/media/food2.jpeg": "/Westafricarestaurant/static/media/food2.58d5624008660cda4f6d.jpeg",
+    "static/media/cap.png": "/Westafricarestaurant/static/media/cap.54b1870dfc9b5415a3cc.png",
+    "static/media/capt.png": "/Westafricarestaurant/static/media/capt.67f5e43bf6b45cbe8e3f.png",
+    "static/media/salle.png": "/Westafricarestaurant/static/media/salle.1e673cc27003b91df640.png",
+    "static/media/streetfoodafiche.png": "/Westafricarestaurant/static/media/streetfoodafiche.9de3c2ea133f68167f26.png",
+    "static/media/food1.png": "/Westafricarestaurant/static/media/food1.5461146d4cd0395f151b.png",
+    "static/media/new2.png": "/Westafricarestaurant/static/media/new2.fb31fa38a5fbf83fd159.png",
+    "static/media/im2.png": "/Westafricarestaurant/static/media/im2.e32316ccbe9991f6ad0f.png",
+    "static/media/im1.png": "/Westafricarestaurant/static/media/im1.517bbbee399a3ddb74c8.png",
+    "static/media/menu.jpg": "/Westafricarestaurant/static/media/menu.5d3d9934857fd66830d1.jpg",
+    "static/media/food1.jpeg": "/Westafricarestaurant/static/media/food1.68fa6d320253a7120c29.jpeg",
+    "static/media/food3.jpeg": "/Westafricarestaurant/static/media/food3.ef6949dd65d5d68cb291.jpeg",
+    "static/media/caption.jpg": "/Westafricarestaurant/static/media/caption.8156ba947bdd9e48e3ef.jpg",
+    "static/media/logo.jpg": "/Westafricarestaurant/static/media/logo.cabab6ef079591881474.jpg",
+    "index.html": "/Westafricarestaurant/index.html",
+    "static/media/spoon.svg": "/Westafricarestaurant/static/media/spoon.e7ad78a0cb2938e5640b307135a9719c.svg",
+    "main.52f6c78b.css.map": "/Westafricarestaurant/static/css/main.52f6c78b.css.map",
+    "main.19db4240.js.map": "/Westafricarestaurant/static/js/main.19db4240.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52f6c78b.css",
+    "static/js/main.19db4240.js"
+  ]
+}

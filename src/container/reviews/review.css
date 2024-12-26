@@ -1,0 +1,140 @@
+.review {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+.app__reviews-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-golden);
+}
+
+.review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.review-card {
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-golden);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(var(--color-golden-rgb), 0.2);
+}
+
+.review-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--color-golden), transparent);
+}
+
+.review-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--color-golden);
+    font-family: var(--font-base);
+}
+
+.review-card p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: var(--color-white);
+    font-family: var(--font-alt);
+}
+
+.star-icon {
+    color: var(--color-golden);
+    font-size: 1.2rem;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover .star-icon {
+    transform: scale(1.1);
+}
+
+.google-icon {
+    color: var(--color-golden);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover .google-icon {
+    opacity: 1;
+}
+
+@media screen and (max-width: 850px) {
+    .review-list {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding: 0 1rem;
+    }
+    
+    .app__reviews-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .review {
+        padding: 2rem 0;
+    }
+
+    .review-list {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        padding: 1.5rem;
+    }
+
+    .app__reviews-title {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+    }
+
+    .review-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .review-card p {
+        font-size: 0.9rem;
+    }
+
+    .star-icon {
+        font-size: 1rem;
+    }
+
+    .google-icon {
+        font-size: 1.2rem;
+    }
+
+    .review-card:nth-child(5),
+    .review-card:nth-child(6) {
+        display: none;
+    }
+}
